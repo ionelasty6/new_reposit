@@ -10,42 +10,49 @@ class Address
     private string house;
     private string apartment;
 
+    // Властивість для доступу до індексу
     public string Index
     {
         get { return index; }
         set { index = value; }
     }
 
+    // Властивість для доступу до країни
     public string Country
     {
         get { return country; }
         set { country = value; }
     }
 
+    // Властивість для доступу до міста
     public string City
     {
         get { return city; }
         set { city = value; }
     }
 
+    // Властивість для доступу до вулиці
     public string Street
     {
         get { return street; }
         set { street = value; }
     }
 
+    // Властивість для доступу до будинку
     public string House
     {
         get { return house; }
         set { house = value; }
     }
 
+    // Властивість для доступу до квартири
     public string Apartment
     {
         get { return apartment; }
         set { apartment = value; }
     }
 
+    // Метод для виведення інформації про адресу
     public void PrintAddress()
     {
         Console.WriteLine("Поштова адреса:");
@@ -65,6 +72,7 @@ class Converter
     private double eurRate;
     private double plnRate;
 
+    // Конструктор для ініціалізації курсів валют
     public Converter(double usd, double eur, double pln)
     {
         usdRate = usd;
@@ -72,6 +80,7 @@ class Converter
         plnRate = pln;
     }
 
+    // Методи для конвертації валют
     public double ConvertToUSD(double uah)
     {
         return uah / usdRate;
@@ -111,18 +120,21 @@ class Employee
     private string position;
     private int experience;
 
+    // Конструктор для ініціалізації прізвища та імені співробітника
     public Employee(string lastName, string firstName)
     {
         this.lastName = lastName;
         this.firstName = firstName;
     }
 
+    // Метод для встановлення посади та стажу співробітника
     public void SetPositionAndExperience(string position, int experience)
     {
         this.position = position;
         this.experience = experience;
     }
 
+    // Метод для розрахунку окладу співробітника
     public double CalculateSalary()
     {
         // Припустимо, що оклад залежить від посади та стажу
@@ -143,6 +155,7 @@ class Employee
         return salary;
     }
 
+    // Метод для розрахунку податкового збору
     public double CalculateTax()
     {
         // Податковий збір (припустимо, 18%)
@@ -150,6 +163,7 @@ class Employee
         return 0.18 * salary;
     }
 
+    // Метод для виведення інформації про співробітника
     public void PrintEmployeeInfo()
     {
         Console.WriteLine("Ім'я: " + firstName);
@@ -169,6 +183,7 @@ class User
     public int Age { get; set; }
     public DateTime RegistrationDate { get; }
 
+    // Конструктор для ініціалізації інформації про користувача
     public User(string login, string firstName, string lastName)
     {
         Login = login;
@@ -177,6 +192,7 @@ class User
         RegistrationDate = DateTime.Now;
     }
 
+    // Метод для виведення інформації про користувача
     public void PrintUserInfo()
     {
         Console.WriteLine("Логін: " + Login);
