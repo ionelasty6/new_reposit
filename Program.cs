@@ -1,5 +1,6 @@
 ﻿using System;
 
+// Клас Address
 class Address
 {
     private string index;
@@ -9,42 +10,36 @@ class Address
     private string house;
     private string apartment;
 
-    // Властивість для поля index
     public string Index
     {
         get { return index; }
         set { index = value; }
     }
 
-    // Властивість для поля country
     public string Country
     {
         get { return country; }
         set { country = value; }
     }
 
-    // Властивість для поля city
     public string City
     {
         get { return city; }
         set { city = value; }
     }
 
-    // Властивість для поля street
     public string Street
     {
         get { return street; }
         set { street = value; }
     }
 
-    // Властивість для поля house
     public string House
     {
         get { return house; }
         set { house = value; }
     }
 
-    // Властивість для поля apartment
     public string Apartment
     {
         get { return apartment; }
@@ -63,6 +58,7 @@ class Address
     }
 }
 
+// Клас Converter
 class Converter
 {
     private double usdRate;
@@ -107,14 +103,96 @@ class Converter
     }
 }
 
+// Клас Employee
+class Employee
+{
+    private string lastName;
+    private string firstName;
+    private string position;
+    private int experience;
+
+    public Employee(string lastName, string firstName)
+    {
+        this.lastName = lastName;
+        this.firstName = firstName;
+    }
+
+    public void SetPositionAndExperience(string position, int experience)
+    {
+        this.position = position;
+        this.experience = experience;
+    }
+
+    public double CalculateSalary()
+    {
+        // Припустимо, що оклад залежить від посади та стажу
+        double baseSalary = 50000; // Базовий оклад
+        double positionBonus = 0;
+
+        if (position == "Менеджер")
+            positionBonus = 10000;
+        else if (position == "Розробник")
+            positionBonus = 15000;
+        else if (position == "Тестувальник")
+            positionBonus = 12000;
+
+        // Додатковий бонус за стаж
+        double experienceBonus = experience * 1000;
+
+        double salary = baseSalary + positionBonus + experienceBonus;
+        return salary;
+    }
+
+    public double CalculateTax()
+    {
+        // Податковий збір (припустимо, 18%)
+        double salary = CalculateSalary();
+        return 0.18 * salary;
+    }
+
+    public void PrintEmployeeInfo()
+    {
+        Console.WriteLine("Ім'я: " + firstName);
+        Console.WriteLine("Прізвище: " + lastName);
+        Console.WriteLine("Посада: " + position);
+        Console.WriteLine("Оклад: " + CalculateSalary());
+        Console.WriteLine("Податковий збір: " + CalculateTax());
+    }
+}
+
+// Клас User
+class User
+{
+    public string Login { get; private set; }
+    public string FirstName { get; private set; }
+    public string LastName { get; private set; }
+    public int Age { get; set; }
+    public DateTime RegistrationDate { get; }
+
+    public User(string login, string firstName, string lastName)
+    {
+        Login = login;
+        FirstName = firstName;
+        LastName = lastName;
+        RegistrationDate = DateTime.Now;
+    }
+
+    public void PrintUserInfo()
+    {
+        Console.WriteLine("Логін: " + Login);
+        Console.WriteLine("Ім'я: " + FirstName);
+        Console.WriteLine("Прізвище: " + LastName);
+        Console.WriteLine("Вік: " + Age);
+        Console.WriteLine("Дата реєстрації: " + RegistrationDate.ToString("dd.MM.yyyy HH:mm:ss"));
+    }
+}
+
 class Program
 {
     static void Main()
     {
         // Створення екземпляру класу Address
         Address address = new Address();
-
-        // Заповнення полів поштової адреси
         address.Index = "12345";
         address.Country = "Україна";
         address.City = "Київ";
@@ -128,17 +206,26 @@ class Program
         // Створення екземпляру класу Converter з курсами валют
         Converter converter = new Converter(36.5, 39.5, 8.5);
 
-        // Конвертація з гривні в USD
+        // Конвертація гривні в USD та назад
         double uahAmount = 1000.0;
         double usdAmount = converter.ConvertToUSD(uahAmount);
+        double uahConverted = converter.ConvertFromUSD(usdAmount);
         Console.WriteLine($"{uahAmount} UAH = {usdAmount} USD");
+        Console.WriteLine($"{usdAmount} USD = {uahConverted} UAH");
 
-        // Конвертація з USD в гривню
-        double usdToConvert = 50.0;
-        double uahConverted = converter.ConvertFromUSD(usdToConvert);
-        Console.WriteLine($"{usdToConvert} USD = {uahConverted} UAH");
+        // Створення екземпляру класу Employee
+        Employee employee = new Employee("Петров", "Іван");
+        employee.SetPositionAndExperience("Розробник", 5);
 
-        // Аналогічно можна виконати конвертацію в EUR та PLN
+        // Виведення інформації про співробітника
+        employee.PrintEmployeeInfo();
+
+        // Створення екземпляру класу User
+        User user = new User("user123", "Юрій", "Ковальов");
+        user.Age = 30;
+
+        // Виведення інформації про користувача
+        user.PrintUserInfo();
 
         Console.ReadLine();
     }

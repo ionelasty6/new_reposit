@@ -1,0 +1,14 @@
+C:\Users\Фвьшт\OneDrive\Рабочий стол\Vova\Vova_1\bin\Debug\net6.0\Vova_1.exe
+C:\Users\Фвьшт\OneDrive\Рабочий стол\Vova\Vova_1\bin\Debug\net6.0\Vova_1.deps.json
+C:\Users\Фвьшт\OneDrive\Рабочий стол\Vova\Vova_1\bin\Debug\net6.0\Vova_1.runtimeconfig.json
+C:\Users\Фвьшт\OneDrive\Рабочий стол\Vova\Vova_1\bin\Debug\net6.0\Vova_1.dll
+C:\Users\Фвьшт\OneDrive\Рабочий стол\Vova\Vova_1\bin\Debug\net6.0\Vova_1.pdb
+C:\Users\Фвьшт\OneDrive\Рабочий стол\Vova\Vova_1\obj\Debug\net6.0\Vova_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Фвьшт\OneDrive\Рабочий стол\Vova\Vova_1\obj\Debug\net6.0\Vova_1.AssemblyInfoInputs.cache
+C:\Users\Фвьшт\OneDrive\Рабочий стол\Vova\Vova_1\obj\Debug\net6.0\Vova_1.AssemblyInfo.cs
+C:\Users\Фвьшт\OneDrive\Рабочий стол\Vova\Vova_1\obj\Debug\net6.0\Vova_1.csproj.CoreCompileInputs.cache
+C:\Users\Фвьшт\OneDrive\Рабочий стол\Vova\Vova_1\obj\Debug\net6.0\Vova_1.dll
+C:\Users\Фвьшт\OneDrive\Рабочий стол\Vova\Vova_1\obj\Debug\net6.0\refint\Vova_1.dll
+C:\Users\Фвьшт\OneDrive\Рабочий стол\Vova\Vova_1\obj\Debug\net6.0\Vova_1.pdb
+C:\Users\Фвьшт\OneDrive\Рабочий стол\Vova\Vova_1\obj\Debug\net6.0\Vova_1.genruntimeconfig.cache
+C:\Users\Фвьшт\OneDrive\Рабочий стол\Vova\Vova_1\obj\Debug\net6.0\ref\Vova_1.dll
